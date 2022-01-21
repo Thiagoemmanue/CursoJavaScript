@@ -1,4 +1,4 @@
-var vel = 15
+var vel = 80
 console.log(`A velocidade do seu carro é ${vel} km/h`)
 
 //Condição composta com if and else
