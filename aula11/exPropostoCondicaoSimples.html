@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nationality</title>
+    <style>
+         body {
+            font: normal 18pt Arial;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nationality</h1>
+    What is your country of origin: <input type="text" name="txt1" id="txt1">
+    <input type="button" value="Save" onclick="submit()">
+    <div id="res"></div>
+
+    <script>
+        function submit(){
+            var txtn = window.document.querySelector('input#txt1')
+            var res = window.document.querySelector('div#res')
+            var country = (txtn.value)
+            res.innerHTML = `<p>You were born in ${country}</p>`
+            if (country == 'Brazil'){
+                res.innerHTML += `<p>Are you Brazilian!!!</p>`
+            } else {
+                res.innerHTML += `<p>Are you a foreigner!!!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
